@@ -131,7 +131,7 @@ For active employees, values where converted into 1 which is greater than 0 and 
   act_emp = time_length(difftime(clean$termdate, clean$hire_date),"years")
 ```
 
-For stay duration, values which are 0 or less than 0 are covnerted to 0. Why? logic.
+For stay duration, values which are 0 or less than 0 are converted to 0. Why? logic.
 
 ```bash
   sty_dur = time_length(difftime(clean$termdate, clean$hire_date),"years")
