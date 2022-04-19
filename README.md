@@ -1,8 +1,19 @@
+![Github Repo Size](https://img.shields.io/github/repo-size/Onnamission/Human-Resource-Analytics)
+![Github Repo License](https://img.shields.io/github/license/Onnamission/Human-Resource-Analytics)
+
 # Human Resource Analytics
 Analysis of the employee records for the HR department.
 
 ## Tech Stack
-**Client:** R, SQL, Tableau
+![Made With R](https://img.shields.io/badge/Made%20with-R-red?style=for-the-badge&logo=R)
+![Made With SQL](https://img.shields.io/badge/Made%20with-MySQL-blue?style=for-the-badge&logo=MySQL)
+![Made With Tableau](https://img.shields.io/badge/Made%20with-Tableau-orange?style=for-the-badge&logo=Tableau)
+
+## Download
+
+```bash
+  git clone https://github.com/Onnamission/Human-Resource-Analytics.git
+```
 
 ## About
 The original procedures like data cleaning and creating new parameters, applied on the HR dataset was directly made through tableau which is not that reliable.
@@ -152,7 +163,7 @@ If you find same repository as this one without giving me acknowledgement:
 - Click on the dashboard related to this repository.
 - Check the published date
 
-The first published date is  Apr 19, 2022 and will remain that only. Look out the commit time also.
+The first published date is  Apr 19, 2022 and will remain that only.
 
 If the code is same and dashboard is different, check for the measured values in the dashboard.
 
