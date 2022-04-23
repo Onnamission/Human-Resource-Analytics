@@ -2,18 +2,17 @@
 
 library(tidyverse)
 library(janitor)
-library(skimr)
 library(lubridate)
 
 
 # Setting working directory
 print(getwd())
-setwd("D:/Business Analytics/PROJECT 2")
+setwd("D:/Projects/Human-Resource-Analytics")
 print(getwd())
 
 dff = read.csv('Dataset/Human_Resources.csv')
 
-View(dff)
+# View(dff)
 
 
 # Data Cleaning Pipeline
@@ -21,7 +20,7 @@ clean = dff %>%
   drop_na() %>%
   janitor::clean_names()
 # Can't remove blank values right now
-View(clean)
+# View(clean)
 
 
 # Checking data types
@@ -33,7 +32,7 @@ clean$i_id = as.numeric(as.factor(clean$i_id))
 
 sapply(clean, class)
 
-View(clean)
+# View(clean)
 
 
 # Converting DATE/DATE-TIME from character to date
@@ -49,13 +48,13 @@ clean$termdate = as.Date(abis3,format="%Y-%m-%d") # defining what is the desired
 
 sapply(clean, class)
 
-View(clean)
+# View(clean)
 
 
 # Fill blank in termdate with hire_date in place of NA(s)
 clean$termdate[is.na(clean$termdate)] = clean$hire_date
 
-View(clean)
+# View(clean)
 
 
 # Adding age column
@@ -67,7 +66,7 @@ clean$age = age  # putting calculated age
 
 clean$age = round(clean$age) # putting rounded age
 
-View(clean)
+# View(clean)
 
 
 # Adding active employee column
@@ -82,7 +81,7 @@ clean$active_emp = round(clean$active_emp) # putting rounded active employee
 clean$active_emp[clean$active_emp > 0] = 1
 clean$active_emp[clean$active_emp <= 0] = 0
 
-View(clean)
+# View(clean)
 
 
 # Adding stay duration column
@@ -96,13 +95,13 @@ clean$stay_dur = round(clean$stay_dur) # putting rounded stay duration
 
 clean$stay_dur[clean$stay_dur <= 0] = 0
 
-View(clean)
+# View(clean)
 
 
 # Replacing sales value with engineering as it makes more logic
 clean$department[clean$jobtitle == "Solutions Engineer Manager"] = "Engineering"
 
-View(clean)
+# View(clean)
 
 
 # Renaming column name
@@ -128,10 +127,10 @@ colnames(clean) = c("id",
 na_if(clean, "")
 aut_data = na.omit(clean)
 
-View(aut_data)
+# View(aut_data)
 
 
 sapply(aut_data, class)
 
 
-write.csv(aut_data, "hr.csv", row.names = FALSE)
+# write.csv(aut_data, "hr.csv", row.names = FALSE)
