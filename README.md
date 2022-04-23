@@ -159,18 +159,7 @@ The visualization were made using Tableau.
 
 ## Disclaimer
 
-If you find same repository as this one without giving me acknowledgement:
-- Go to my tableau profile
-- Click on the dashboard related to this repository.
-- Check the published date
-
-The first published date is  Apr 19, 2022 and will remain that only.
-
-If the code is same and dashboard is different, check for the measured values in the dashboard.
-
-If you find date after the above date, it is copied without my repository acknowledgement.
-
-Further, the code used in this repository is completely original and first published.
+If you are using this repository, acknowledging it is important.
 
 ## Support
 
