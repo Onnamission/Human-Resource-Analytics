@@ -1,10 +1,12 @@
+# Human Resource Analytics
+
 ![Github Repo Release](https://img.shields.io/github/release-date/Onnamission/Human-Resource-Analytics)
+![Github Repo Build](https://img.shields.io/github/workflow/status/Onnamission/Human-Resource-Analytics/hr)
 ![Github Repo Size](https://img.shields.io/github/repo-size/Onnamission/Human-Resource-Analytics)
 ![Github Repo License](https://img.shields.io/github/license/Onnamission/Human-Resource-Analytics)
 ![Github Repo Maintenance](https://img.shields.io/maintenance/yes/2022)
 ![Github Repo Download](https://img.shields.io/github/downloads/Onnamission/Human-Resource-Analytics/total)
 
-# Human Resource Analytics
 Analysis of the employee records for the HR department.
 
 ## Tech Stack
