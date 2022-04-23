@@ -1,3 +1,4 @@
+![Github Repo Release](https://img.shields.io/github/release-date/Onnamission/Human-Resource-Analytics)
 ![Github Repo Size](https://img.shields.io/github/repo-size/Onnamission/Human-Resource-Analytics)
 ![Github Repo License](https://img.shields.io/github/license/Onnamission/Human-Resource-Analytics)
 
