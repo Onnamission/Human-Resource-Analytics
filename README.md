@@ -2,10 +2,11 @@
 
 ![Github Repo Release](https://img.shields.io/github/release-date/Onnamission/Human-Resource-Analytics)
 ![Github Repo Build](https://img.shields.io/github/workflow/status/Onnamission/Human-Resource-Analytics/hr)
+![Github Repo Checks](https://badgen.net/github/checks/Onnamission/Human-Resource-Analytics/main)
 ![Github Repo Size](https://img.shields.io/github/repo-size/Onnamission/Human-Resource-Analytics)
 ![Github Repo License](https://img.shields.io/github/license/Onnamission/Human-Resource-Analytics)
-![Github Repo Maintenance](https://img.shields.io/maintenance/yes/2022)
 ![Github Repo Download](https://img.shields.io/github/downloads/Onnamission/Human-Resource-Analytics/total)
+![Github Repo Star Req](https://img.shields.io/badge/%F0%9F%8C%9F-If%20Useful-BC4E99)
 
 Analysis of the employee records for the HR department.
 
@@ -32,7 +33,7 @@ Now here comes the role on R where you just need to define a function in a pipli
 ## Data Pipline in R
 Defining data pipeline in R for data cleaning.
 
-```bash
+```r
   data_clean = df %>%
     na_if(-1) %>%
     na_if(0) %>%
@@ -57,33 +58,33 @@ The datset is about the employee records in an organization. The dataset is in c
 
 In this dataset, we can't remove all the rows which have blank ("") spaces as we can loss too much of data.
 
-```bash
+```r
   clean = dff %>%
   drop_na()
 ```
 
 The parameter-termdate has many blank spaces is also an important parameter, so i copy-pasted the values of hire_date in the termdate where there are blank spaces.
 
-```bash
+```r
   clean$termdate[is.na(clean$termdate)] = clean$hire_date
 ```
 During the data type change in the termdate from character to date, the blanks get converted to NA and then replaced that NA with the hire_date.
 
 The i_id column has id(s) of the employees but in character data type and looks bit complicated. So converted it into 1 - total number of rows.
 
-```bash
+```r
   clean$i_id = as.numeric(as.factor(clean$i_id))
 ```
 
 Renamed sales for the Solutions Engineer Manager to Engineering as it makes more sense.
 
-```bash
+```r
   clean$department[clean$jobtitle == "Solutions Engineer Manager"] = "Engineering"
 ```
 
 Renamed column name into more readable words.
 
-```bash
+```r
   colnames(clean) = c("id", 
                     "first_name", 
                     "last_name", 
@@ -104,7 +105,7 @@ Renamed column name into more readable words.
 
 Made remanining cleaning at the end.
 
-```bash
+```r
   na_if(clean, "")
   aut_data = na.omit(clean)
 ```
@@ -126,19 +127,19 @@ Where active_emp means active employees and sty_dur means stay duration.
 
 For age
 
-```bash
+```r
   emp_age = time_length(difftime(clean$hire_date, clean$birthdate),"years")
 ```
 
 For active employees, values where converted into 1 which is greater than 0 and 0 for less than or equal to 0. Thus by getting a sum we could get total active employees. Using total count does not makes sense as it will count total number of rows which will be same as total number of employees.
 
-```bash
+```r
   act_emp = time_length(difftime(clean$termdate, clean$hire_date),"years")
 ```
 
 For stay duration, values which are 0 or less than 0 are converted to 0. Why? logic.
 
-```bash
+```r
   sty_dur = time_length(difftime(clean$termdate, clean$hire_date),"years")
 ```
 
