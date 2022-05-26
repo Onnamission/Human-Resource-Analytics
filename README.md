@@ -11,9 +11,9 @@
 Analysis of the employee records for the HR department.
 
 ## Tech Stack
-![Made With R](https://img.shields.io/badge/Made%20with-R-red?style=for-the-badge&logo=R)
-![Made With SQL](https://img.shields.io/badge/Made%20with-MySQL-blue?style=for-the-badge&logo=MySQL)
-![Made With Tableau](https://img.shields.io/badge/Made%20with-Tableau-orange?style=for-the-badge&logo=Tableau)
+![Made With R](https://img.shields.io/badge/-r-165CAA?style=for-the-badge&labelColor=grey&logo=r&logoColor=white)
+![Made With SQL](https://img.shields.io/badge/-postgresql-336791?style=for-the-badge&labelColor=grey&logo=postgresql&logoColor=white)
+![Made With Tableau](https://img.shields.io/badge/-tableau-orange?style=for-the-badge&labelColor=grey&logo=tableau&logoColor=white)
 
 ## Download
 
@@ -160,15 +160,11 @@ The visualization were made using Tableau.
 ![HR Dashboard](HR_Dashboard.png)
 
 ## 🔗 Links
-[![TABLEAU](https://img.shields.io/badge/tableau-0A66C2?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/aditya.kakde)
+[![TABLEAU](https://img.shields.io/badge/tableau-orange?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/aditya.kakde)
 
 ## Disclaimer
 
 If you are using this repository, acknowledging it is important.
-
-## Support
-
-For support, find me 😂.
 
 ## Authors
 
